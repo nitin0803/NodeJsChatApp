@@ -5,9 +5,14 @@ const express = require('express')
 const publicPath = path.join(__dirname,'/../public');
 const port = process.env.PORT || 3000;
 var app = express();
-const {generateMessage,generateLocationMessage} = require('C:\\Nitin\\Study\\NodeJs\\node-chat-app\\server\\utils\\message.js');
-const {isRealString} = require ('C:\\Nitin\\Study\\NodeJs\\node-chat-app\\server\\utils\\validation.js');
-const {Persons} =  require('C:\\Nitin\\Study\\NodeJs\\node-chat-app\\server\\utils\\users.js');
+
+//const {generateMessage,generateLocationMessage} = require('C:\\Nitin\\Study\\NodeJs\\node-chat-app\\server\\utils\\message.js');
+///const {isRealString} = require ('C:\\Nitin\\Study\\NodeJs\\node-chat-app\\server\\utils\\validation.js');
+//const {Persons} =  require('C:\\Nitin\\Study\\NodeJs\\node-chat-app\\server\\utils\\users.js');
+
+const {generateMessage,generateLocationMessage} = require('./utils/message.js');
+const {isRealString} = require ('./utils/validation.js');
+const {Persons} =  require('./utils/users.js');
 
 var server = http.createServer(app);
 var io = socketIO(server);
